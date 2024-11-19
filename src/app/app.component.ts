@@ -14,11 +14,11 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     RouterOutlet,
     HeaderComponent,
-    HeroComponent,
-    AboutComponent,
-    ProjectsComponent,
-    SkillsComponent,
-    ContactComponent,
+    // HeroComponent,
+    // AboutComponent,
+    // ProjectsComponent,
+    // SkillsComponent,
+    // ContactComponent,
     FooterComponent
   ],
   templateUrl: './app.component.html',

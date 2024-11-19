@@ -19,7 +19,8 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       name: 'Sistema de Gestão',
-      description: 'Sistema para gerenciar tarefas e colaboradores em tempo real.',
+      description:
+        'Sistema para gerenciar tarefas e colaboradores em tempo real.',
       technologies: ['Angular', 'Node.js', 'PostgreSQL'],
       link: '#',
     },
@@ -31,9 +32,17 @@ export class ProjectsComponent {
     },
     {
       name: 'Aplicativo Fitness',
-      description: 'Aplicativo móvel para monitoramento de atividades e nutrição.',
+      description:
+        'Aplicativo móvel para monitoramento de atividades e nutrição.',
       technologies: ['Flutter', 'Firebase'],
       link: '#',
     },
   ];
+  selectedProjected: any = null; //Projeto selecionado
+  openModal(project: any) {
+    this.selectedProjected = project; // Definir o projeto no modal
+  }
+  closeModal() {
+    this.selectedProjected = null; // Fechar o modal
+  }
 }
