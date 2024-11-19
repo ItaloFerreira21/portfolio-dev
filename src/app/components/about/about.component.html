@@ -1,0 +1,86 @@
+<section id="about" class="py-20 bg-gradient-to-b from-black to-gray-900">
+  <!-- Container principal -->
+  <div class="container mx-auto px-4">
+    
+    <!-- Cabeçalho da seção -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text inline-block">
+        Sobre Mim
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Grid de conteúdo -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Coluna de texto -->
+      <div class="space-y-6">
+        <p class="text-gray-300 text-lg leading-relaxed">
+          Olá! Sou um desenvolvedor Full Stack apaixonado por criar soluções digitais inovadoras. Com {{experienceYears}} anos de experiência no desenvolvimento web, tenho trabalhado com diversas tecnologias e frameworks modernos.
+        </p>
+        <p class="text-gray-300 text-lg leading-relaxed">
+          Minha jornada na programação começou com a curiosidade de entender como as coisas funcionam, e essa curiosidade continua me impulsionando a aprender e evoluir constantemente.
+        </p>
+        
+        <!-- Cards de especialidades -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+          @for (exp of experiences; track exp) {
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700/50">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="h-8 w-8 text-blue-500 mb-4" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  [attr.d]="exp.icon"
+                />
+              </svg>
+              <h3 class="text-lg font-semibold mb-2 text-white">{{exp.title}}</h3>
+              <p class="text-gray-400 text-sm">{{exp.description}}</p>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Coluna de estatísticas/skills -->
+      <div class="relative">
+        <!-- Card principal com estatísticas -->
+        <div class="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+          <h3 class="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+            Destaques
+          </h3>
+          
+          <!-- Grid de estatísticas -->
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-blue-500 mb-2">50+</div>
+              <div class="text-gray-400">Projetos Concluídos</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-purple-500 mb-2">{{experienceYears}}</div>
+              <div class="text-gray-400">Anos de Experiência</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-blue-500 mb-2">100%</div>
+              <div class="text-gray-400">Satisfação</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-purple-500 mb-2">24/7</div>
+              <div class="text-gray-400">Suporte</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elementos decorativos -->
+        <div class="absolute -top-4 -right-4 w-72 h-72 bg-blue-500/10 rounded-full filter blur-3xl"></div>
+        <div class="absolute -bottom-4 -left-4 w-72 h-72 bg-purple-500/10 rounded-full filter blur-3xl"></div>
+      </div>
+      
+    </div>
+  </div>
+</section>

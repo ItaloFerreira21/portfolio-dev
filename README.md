@@ -1,3 +1,6 @@
+<!-- COMANDO PARA CRIAR NOVO COMPONETE AUTONOMO JA CONGIGURADO -->
+<!-- ng generate component components/nome-do-componente --standalone --> 
+
 # PortfolioDev
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.

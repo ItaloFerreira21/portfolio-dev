@@ -1,0 +1,28 @@
+<p>header works!</p>
+<header class="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-sm">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Nome do desenvolvedor -->
+      <a routerLink="/" class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text hover:scale-105 transition-transform">
+        Italo ferreira.dev
+      </a>
+
+      <!-- Menu de Navegação -->
+      
+        <div class="hidden md:flex space-x-8">
+          <a routerLink="/about" class="text-gray-300 hover:text-white transition-colors">Sobre</a>
+          <a routerLink="/projects" class="text-gray-300 hover:text-white transition-colors">Projetos</a>
+          <a routerLink="/skills" class="text-gray-300 hover:text-white transition-colors">Habilidades</a>
+          <a routerLink="/contact" class="text-gray-300 hover:text-white transition-colors">Contato</a>
+        </div>
+      
+
+      <!-- Botão para menu mobile -->
+      <button class="md:hidden text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
