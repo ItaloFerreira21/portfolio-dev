@@ -14,15 +14,15 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     RouterOutlet,
     HeaderComponent,
-    // HeroComponent,
-    // AboutComponent,
-    // ProjectsComponent,
-    // SkillsComponent,
-    // ContactComponent,
-    FooterComponent
+    HeroComponent,
+    //AboutComponent,
+    //ProjectsComponent,
+    SkillsComponent,
+    //ContactComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'portfolio-dev';

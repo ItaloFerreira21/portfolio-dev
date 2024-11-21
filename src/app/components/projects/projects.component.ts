@@ -22,20 +22,20 @@ export class ProjectsComponent {
       description:
         'Sistema para gerenciar tarefas e colaboradores em tempo real.',
       technologies: ['Angular', 'Node.js', 'PostgreSQL'],
-      link: '#',
+      link: '#', //Link do projeto
     },
     {
       name: 'E-commerce Inteligente',
       description: 'Plataforma de vendas com recomendação personalizada.',
       technologies: ['React', 'Tailwind CSS', 'MongoDB'],
-      link: '#',
+      link: '#', //Link do projeto
     },
     {
       name: 'Aplicativo Fitness',
       description:
         'Aplicativo móvel para monitoramento de atividades e nutrição.',
       technologies: ['Flutter', 'Firebase'],
-      link: '#',
+      link: '#', //Link do projeto
     },
   ];
   selectedProjected: any = null; //Projeto selecionado
