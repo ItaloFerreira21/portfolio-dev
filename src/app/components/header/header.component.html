@@ -17,6 +17,23 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </button>
+
+     <!--  <p-menu [model]="items">
+        <ng-template pTemplate="item" let-item>
+            <ng-container *ngIf="item.route; else elseBlock">
+                <a [routerLink]="item.route" class="p-menuitem-link">
+                    <span [class]="item.icon"></span>
+                    <span class="ml-2">{{ item.label }}</span>
+                </a>
+            </ng-container>
+            <ng-template #elseBlock>
+                <a [href]="item.url" class="p-menuitem-link">
+                    <span [class]="item.icon"></span>
+                    <span class="ml-2">{{ item.label }}</span>
+                </a>
+            </ng-template>
+        </ng-template>
+    </p-menu> -->
     </div>
   </nav>
 </header>

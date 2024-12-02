@@ -1,14 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LucideAngularModule } from 'lucide-angular';
+
+interface Statistic {
+  title: string;
+  value: string;
+  icon: string;
+  color: string; // cor do icone
+}
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LucideAngularModule],
   templateUrl: './about.component.html',
 })
 export class AboutComponent {
-  experienceYears: number = 5; // Ajuste conforme sua experiência
+  statistics: Statistic[] = [
+    /* {
+    title:'Projetos Concluidos',
+    value: '15',
+    color: 'blue-500',
+    icon: '<lucide-icon name="chart-bar-big"></lucide-icon>' //icone de grafico
+    
+  }, */
+/*     {
+      title: 'Anos de Experiência',
+      value: '5',
+      color: 'purple-500',
+      icon: '',
+    }, */
+   /*  {
+      title: ' Satisfação',
+      value: '100%',
+      color: 'text-4xl font-bold text-blue-500 mb-2',
+      icon: '<lucide-icon name="language"></lucide-icon>', //icone de linguagens
+    }, */
+    //Outras estatitiscas
+  ];
+  experienceYears: number = 1; // Ajuste conforme sua experiência
 
   experiences = [
     {

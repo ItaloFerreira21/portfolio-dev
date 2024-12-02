@@ -8,6 +8,7 @@
       >
         Sobre Mim
       </h2>
+
       <div
         class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"
       ></div>
@@ -41,6 +42,7 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              alt="Icone repesentando a habilidade do desenvolvedor fullstack"
             >
               <path
                 stroke-linecap="round"
@@ -61,14 +63,27 @@
       <!-- Coluna de estatísticas/skills -->
       <div class="relative">
         <!-- Card principal com estatísticas -->
+
         <div
-          class="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
+          class="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:transform hover:scale-105 transition-all duration-300"
         >
           <h3
-            class="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+            class="text-2xl text-center font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text "
           >
             Destaques
           </h3>
+
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center" *ngFor="let stat of statistics">
+              <div
+                class="text-4xl font-bold mb-2"
+                [ngStyle]="{ color: stat.color }"
+              >
+                {{ stat.value }}
+              </div>
+              <div class="text-gray-400">{{ stat.title }}</div>
+            </div>
+          </div>
 
           <!-- Grid de estatísticas -->
           <div class="grid grid-cols-2 gap-6">
