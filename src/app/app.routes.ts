@@ -5,6 +5,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 
+
 export const routes: Routes = [
   { path: 'hero', component: HeroComponent }, // Rota para o HeroComponent
   { path: '', redirectTo: 'about', pathMatch: 'full' }, // Rota inicial redireciona para "about"

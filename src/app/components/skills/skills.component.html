@@ -1,1 +1,50 @@
+<section id="skills" class="py-20 bg-gray-900">
+  <div class="container mx-auto px-4">
+    <!-- Título da seção -->
+    <div class="text-center mb-12">
+      <h2
+        class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-teal-500 text-transparent bg-clip-text inline-block"
+      >
+        Habilidades
+      </h2>
+      <div
+        class="w-24 h-1 bg-gradient-to-r from-green-500 to-teal-500 mx-auto rounded-full"
+      ></div>
+    </div>
 
+    <!-- Grade de habilidades -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+      <div
+        *ngFor="let skill of skills"
+        class="bg-gray-800/50 p-6 rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-gray-700/50"
+      >
+        <div class="flex items-center space-x-4">
+          <svg
+            class="h-10 w-10 text-green-500"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              [attr.d]="skill.icon"
+            />
+          </svg>
+          <h3 class="text-lg font-semibold text-white">{{ skill.name }}</h3>
+        </div>
+        <div class="mt-4">
+          <div class="h-2 bg-gray-700 rounded-full">
+            <div
+              class="h-2 rounded-full"
+              [ngStyle]="{ width: skill.level + '%', background: skill.color }"
+            ></div>
+          </div>
+          <p class="text-gray-400 text-sm mt-2">{{ skill.level }}%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,39 +1,74 @@
-<header class="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-sm">
+<header class="absolute w-full top-0 z-50 bg-black/60">
   <nav class="container mx-auto px-4 py-4">
     <div class="flex items-center justify-between">
-      <a routerLink="/" class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text hover:scale-105 transition-transform">
+      <!-- Nome/Logo -->
+      <a
+        routerLink="/"
+        class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text hover:scale-105 transition-transform"
+      >
         Italo Ferreira.dev
       </a>
-      
+
+      <!-- Menu Desktop -->
       <div class="hidden md:flex space-x-8">
-        <a routerLink="/about" class="text-gray-300 hover:text-white transition-colors">Sobre</a>
-        <a routerLink="/projects" class="text-gray-300 hover:text-white transition-colors">Projetos</a>
-        <a routerLink="/skills" class="text-gray-300 hover:text-white transition-colors">Habilidades</a>
-        <a routerLink="/contact" class="text-gray-300 hover:text-white transition-colors">Contato</a>
+        <a
+          routerLink="/about"
+          class="text-gray-300 hover:text-white transition-colors"
+          >Sobre</a
+        >
+        <a
+          routerLink="/projects"
+          class="text-gray-300 hover:text-white transition-colors"
+          >Projetos</a
+        >
+        <a
+          routerLink="/skills"
+          class="text-gray-300 hover:text-white transition-colors"
+          >Habilidades</a
+        >
+        <a
+          routerLink="/contact"
+          class="text-gray-300 hover:text-white transition-colors"
+          >Contato</a
+        >
       </div>
 
-      <button class="md:hidden text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      <!-- Botão Mobile -->
+      <button (click)="toggleMenu()" class="md:hidden text-white">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
         </svg>
       </button>
-
-     <!--  <p-menu [model]="items">
-        <ng-template pTemplate="item" let-item>
-            <ng-container *ngIf="item.route; else elseBlock">
-                <a [routerLink]="item.route" class="p-menuitem-link">
-                    <span [class]="item.icon"></span>
-                    <span class="ml-2">{{ item.label }}</span>
-                </a>
-            </ng-container>
-            <ng-template #elseBlock>
-                <a [href]="item.url" class="p-menuitem-link">
-                    <span [class]="item.icon"></span>
-                    <span class="ml-2">{{ item.label }}</span>
-                </a>
-            </ng-template>
-        </ng-template>
-    </p-menu> -->
     </div>
+
+    <!-- Menu Mobile Compacto -->
+    <ul
+      *ngIf="isMenuOpen"
+      class="absolute right-4 top-16 bg-dark text-white rounded-md shadow-lg overflow-hidden"
+    >
+      <li class="px-4 py-2 hover:bg-gray-700">
+        <a routerLink="/about" (click)="closeMenu()">Sobre</a>
+      </li>
+      <li class="px-4 py-2 hover:bg-gray-700">
+        <a routerLink="/projects" (click)="closeMenu()">Projetos</a>
+      </li>
+      <li class="px-4 py-2 hover:bg-gray-700">
+        <a routerLink="/skills" (click)="closeMenu()">Habilidades</a>
+      </li>
+      <li class="px-4 py-2 hover:bg-gray-700">
+        <a routerLink="/contact" (click)="closeMenu()">Contato</a>
+      </li>
+    </ul>
   </nav>
 </header>

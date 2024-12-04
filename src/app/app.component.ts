@@ -7,6 +7,10 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -15,14 +19,18 @@ import { FooterComponent } from './components/footer/footer.component';
     RouterOutlet,
     HeaderComponent,
     HeroComponent,
-    //AboutComponent,
-    //ProjectsComponent,
+    AboutComponent,
+    ProjectsComponent,
     SkillsComponent,
-    //ContactComponent,
+    ContactComponent,
     FooterComponent,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    CommonModule,  // Substitua o BrowserModule por CommonModule
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'portfolio-dev';
