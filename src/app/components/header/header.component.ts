@@ -7,29 +7,47 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    CommonModule,  // Necessário para usar diretivas como ngIf
-  ],
+  imports: [MatToolbarModule, MatIconModule, MatButtonModule, CommonModule],
   template: `
-    <header class="absolute w-full top-0 z-50">
+    <header class="absolute bg-black p-2 w-full top-0 z-50">
       <nav class="container mx-auto px-4 py-4">
-        <div class="flex items-center justify-between">
-          <a routerLink="/" class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text hover:scale-105 transition-transform">
+        <div class="flex items-center justify-between ">
+          <a
+            href="#"
+            class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text hover:scale-105 transition-transform"
+          >
             Italo Ferreira.dev
           </a>
-          
-          <!-- Menu para desktop, sempre visível -->
-          <div class="hidden md:flex space-x-8">
-            <button routerLink="/about" class="text-gray-300 hover:text-white transition-colors">Sobre</button>
-            <button routerLink="/projects" class="text-gray-300 hover:text-white transition-colors">Projetos</button>
-            <button routerLink="/skills" class="text-gray-300 hover:text-white transition-colors">Habilidades</button>
-            <button routerLink="/contact" class="text-gray-300 hover:text-white transition-colors">Contato</button>
+
+          <!-- Menu para desktop -->
+          <div class="hidden md:flex space-x-8 ">
+            <button
+              (click)="scrollTo('about')"
+              class="text-gray-300 hover:text-white bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text inline-block transition-colors"
+              >
+              Sobre
+            </button>
+            <button
+              (click)="scrollTo('projects')"
+              class="text-gray-300 hover:text-white bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text inline-block transition-colors"
+              >
+              Projetos
+            </button>
+            <button
+              (click)="scrollTo('skills')"
+              class="text-gray-300 hover:text-white bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text inline-block transition-colors"
+              >
+              Habilidades
+            </button>
+            <button
+              (click)="scrollTo('contact')"
+              class="text-gray-300 hover:text-white bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text inline-block transition-colors"
+              >
+              Contato
+            </button>
           </div>
 
-          <!-- Ícone de menu para mobile -->
+          <!-- Ícone do menu para mobile -->
           <button class="md:hidden text-white" (click)="toggleMenu()">
             <mat-icon>
               <svg
@@ -50,12 +68,35 @@ import { CommonModule } from '@angular/common';
           </button>
         </div>
 
-        <!-- Menu de navegação para mobile -->
-        <div *ngIf="isMenuOpen" class="md:hidden mt-4 flex space-x-8 animate-slideIn">
-          <button routerLink="/about" class="text-gray-300 hover:text-white transition-colors">Sobre</button>
-          <button routerLink="/projects" class="text-gray-300 hover:text-white transition-colors">Projetos</button>
-          <button routerLink="/skills" class="text-gray-300 hover:text-white transition-colors">Habilidades</button>
-          <button routerLink="/contact" class="text-gray-300 hover:text-white transition-colors">Contato</button>
+        <!-- Menu mobile -->
+        <div
+          *ngIf="isMenuOpen"
+          class="md:hidden mt-4 flex space-x-8 animate-slideIn "
+        >
+          <button
+            (click)="scrollTo('about')"
+            class="text-gray-300 hover:text-white bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text inline-block transition-colors"
+          >
+            Sobre
+          </button>
+          <button
+            (click)="scrollTo('projects')"
+            class="text-gray-300 hover:text-white bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text inline-block transition-colors"
+          >
+            Projetos
+          </button>
+          <button
+            (click)="scrollTo('skills')"
+            class="text-gray-300 hover:text-white bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text inline-block transition-colors"
+          >
+            Habilidades
+          </button>
+          <button
+            (click)="scrollTo('contact')"
+            class="text-gray-300 hover:text-white bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text inline-block transition-colors"
+          >
+            Contato
+          </button>
         </div>
       </nav>
     </header>
@@ -76,13 +117,21 @@ import { CommonModule } from '@angular/common';
           opacity: 1;
         }
       }
-    `
-  ]
+    `,
+  ],
 })
 export class HeaderComponent {
   isMenuOpen = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen; // Alterna o estado do menu
+  }
+
+  scrollTo(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    this.isMenuOpen = false; // Fecha o menu após o clique
   }
 }

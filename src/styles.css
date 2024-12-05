@@ -21,3 +21,22 @@
   @tailwind components;
   @tailwind utilities;
 }
+/* Arquivo: styles.css */
+.page-background {
+  @apply py-20 bg-gradient-to-b  to-gray-900;
+}
+/* Remover margem, padding e box-shadow de todos os elementos */
+/* Reset completo */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+

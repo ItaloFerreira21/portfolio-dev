@@ -1,8 +1,40 @@
+<!--  <div class="min-h-screen">
+  <app-header class="page-background"></app-header>
+  <router-outlet class="page-background"></router-outlet>
+  <app-hero class="page-background"></app-hero> 
+  <app-skills class="page-background"></app-skills>
+  <app-footer></app-footer>
+</div>  -->
 
 <div class="min-h-screen">
-  <app-header></app-header>
-  <router-outlet></router-outlet>
-  <app-hero></app-hero> 
-  <app-skills></app-skills>
+  <app-header ></app-header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="page-background">
+      <app-about></app-about>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero" class="page-background">
+      <!-- <app-hero></app-hero> -->
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="page-background">
+      <app-projects></app-projects>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="page-background">
+      <app-skills></app-skills>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-background">
+      <app-contact></app-contact>
+    </section>
+  </main>
+
   <app-footer></app-footer>
 </div>
