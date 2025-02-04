@@ -37,6 +37,13 @@ export class ProjectsComponent {
       technologies: ['Flutter', 'Firebase'],
       link: '#', //Link do projeto
     },
+    {
+      name: 'Lucy',
+      description:
+        'Aplicativo para crai do zero tudo que você preciso para o seu negocio, site, cardapio, posts anuncios, e muito mais.',
+      technologies: ['React', 'AWS', 'PostgreSQL'],
+      link: '#', //Link do projeto
+    },
   ];
   selectedProjected: any = null; //Projeto selecionado
   openModal(project: any) {

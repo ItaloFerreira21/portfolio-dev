@@ -5,7 +5,6 @@ import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,7 +21,6 @@ import { CommonModule } from '@angular/common';
     AboutComponent,
     ProjectsComponent,
     SkillsComponent,
-    ContactComponent,
     FooterComponent,
     MatToolbarModule,
     MatButtonModule,

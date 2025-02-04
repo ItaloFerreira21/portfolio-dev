@@ -39,12 +39,7 @@ import { CommonModule } from '@angular/common';
               >
               Habilidades
             </button>
-            <button
-              (click)="scrollTo('contact')"
-              class="text-gray-300 hover:text-white bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text inline-block transition-colors"
-              >
-              Contato
-            </button>
+            
           </div>
 
           <!-- Ícone do menu para mobile -->
@@ -91,12 +86,9 @@ import { CommonModule } from '@angular/common';
           >
             Habilidades
           </button>
-          <button
-            (click)="scrollTo('contact')"
-            class="text-gray-300 hover:text-white bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text inline-block transition-colors"
-          >
-            Contato
-          </button>
+          
+            
+          
         </div>
       </nav>
     </header>
